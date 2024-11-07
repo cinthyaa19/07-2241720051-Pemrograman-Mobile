@@ -22,15 +22,12 @@ path → membuat path untuk mendukung berbagai platform.
 
 Untuk menambahkan dependensi plugin, jalankan perintah flutter pub add
 
-![alt](/images/P9.1.png)
-
 ![Gambar P9.5](./images/P9.1.png)
-
 
 ### Langkah 3: Ambil Sensor Kamera dari device
 Selanjutnya, kita perlu mengecek jumlah kamera yang tersedia pada perangkat menggunakan plugin camera seperti pada kode berikut ini. Kode ini letakkan dalam void main().
 
-![alt](/images/P9.2.png)
+![Gambar P9.5](./images/P9.2.png)
 
 ### Langkah 4: Buat dan inisialisasi CameraController
 Setelah Anda dapat mengakses kamera, gunakan langkah-langkah berikut untuk membuat dan menginisialisasi CameraController. Pada langkah berikut ini, Anda akan membuat koneksi ke kamera perangkat yang memungkinkan Anda untuk mengontrol kamera dan menampilkan pratinjau umpan kamera.
@@ -41,12 +38,12 @@ Setelah Anda dapat mengakses kamera, gunakan langkah-langkah berikut untuk membu
 4. Buat dan inisialisasi controller dalam metode initState().
 5. Hapus controller dalam metode dispose().
 
-![alt](/images/P9.3.png)
+![Gambar P9.5](./images/P9.3.png)
 
 ### Langkah 5: Gunakan CameraPreview untuk menampilkan preview foto
 Gunakan widget CameraPreview dari package camera untuk menampilkan preview foto. Anda perlu tipe objek void berupa FutureBuilder untuk menangani proses async.
 
-![alt](/images/P9.4.png)
+![Gambar P9.5](./images/P9.4.png)
 
 ### Langkah 6: Ambil foto dengan CameraController
 Pada codelab ini, buatlah sebuah FloatingActionButton yang digunakan untuk mengambil gambar menggunakan CameraController saat pengguna mengetuk tombol.
@@ -57,26 +54,27 @@ Pastikan kamera telah diinisialisasi.
 Gunakan controller untuk mengambil gambar dan pastikan ia mengembalikan objek Future.
 Praktik baik untuk membungkus operasi kode ini dalam blok try / catch guna menangani berbagai kesalahan yang mungkin terjadi.
 
-![alt](/images/P9.5.png)
+![Gambar P9.5](./images/P9.5.png)
 
 ### Langkah 7: Buat widget baru DisplayPictureScreen
 
-![alt](/images/P9.6.png)
+![Gambar P9.5](./images/P9.6.png)
 
 ### Langkah 8: Edit main.dart
 
-![alt](/images/P9.7.png)
+![Gambar P9.5](./images/P9.7.png)
 
 ### Langkah 9: Menampilkan hasil foto
 
-![alt](/images/P9.8.png)
+![Gambar P9.5](./images/P9.8.png)
 
 ### Hasil Output Praktikum 1
 
-![alt](/images/P9.14.jpg)
+![Gambar P9.5](./images/P9.14.jpg)
 
-![alt](/images/P9.15.jpg)
+![Gambar P9.5](./images/P9.15.jpg)
 
+<br><br>
 ## Praktikum 2: Membuat photo filter carousel
 
 ### Langkah 1: Buat project baru
@@ -84,76 +82,95 @@ Buatlah project flutter baru di pertemuan 09 dengan nama photo_filter_carousel
 
 ### Langkah 2: Buat widget Selector ring dan dark gradient
 
-![alt](/images/P9.9.1.png)
-![alt](/images/P9.9.2.png)
-![alt](/images/P9.9.3.png)
+![Gambar P9.5](./images/P9.9.1.pngpng)
+
+![Gambar P9.5](./images/P9.9.2.pngpng)
+
+![Gambar P9.5](./images/P9.9.3.pngpng)
+
 
 ### Langkah 3: Buat widget photo filter carousel
 
-![alt](/images/P9.10.png)
+![Gambar P9.5](./images/P9.10.png)
 
 ### Langkah 4: Membuat filter warna - bagian 1
 
-![alt](/images/P9.11.png)
+![Gambar P9.5](./images/P9.11.png)
 
 ### Langkah 5: Membuat filter warna
 
-![alt](/images/P9.12.png)
+![Gambar P9.5](./images/P9.12.png)
 
 ### Langkah 6: Implementasi filter carousel
 
-![alt](/images/P9.13.png)
+![Gambar P9.5](./images/P9.13.png)
 
 ### Hasil Output Praktikum 2
 
-![alt](/images/P9.16.png)
+![Gambar P9.5](./images/P9.16.png)
 
-![alt](/images/P9.17.png)
+![Gambar P9.5](./images/P9.17.png)
 
-![alt](/images/P9.18.png)
+![Gambar P9.5](./images/P9.18.png)
 
 ## Tugas Praktikum
 Gabungkan hasil praktikum 1 dengan hasil praktikum 2 sehingga setelah melakukan pengambilan foto, dapat dibuat filter carouselnya!
 
 ### Modifikasi file main.dart
-![alt](/images/P9.19.png)
+![Gambar P9.5](./images/P9.19.png)
 
 ### Modifikasi file takepicture_screen.dart
-![alt](/images/P9.20.png)
 
-![alt](/images/P9.21.png)
+![Gambar P9.5](./images/P9.20.png)
+
+![Gambar P9.5](./images/P9.21.png)
 
 ### Modifikasi file dailypicture_screen.dart
-![alt](/images/P9.22.png)
+![Gambar P9.5](./images/P9.22.png)
 
 ### menambahkan file carousel_flowdelegate.dart
 
-![alt](/images/P9.23.png)
+![Gambar P9.5](./images/P9.23.png)
 
 ### memodifikasi file filter_carousel.dart
 
-![alt](/images/P9.24.png)
+![Gambar P9.5](./images/P9.24.png)
 
 ### memodifikasi file filter_item.dart
 
-![alt](/images/P9.25.png)
+![Gambar P9.5](./images/P9.25.png)
 
 ### memodifikasi file filter_selector.dart
 
-![alt](/images/P9.26.png)
+![Gambar P9.5](./images/P9.26.png)
 
-![alt](/images/P9.27.png)
+![Gambar P9.5](./images/P9.27.png)
 
-![alt](/images/P9.28.png)
+![Gambar P9.5](./images/P9.28.png)
 
 ### Hasil Output Tugas Praktikum
 
 Tampilan kamera sebelum dilakukan pengambilan foto
-![alt](/images/P9.29.png)
+![Gambar P9.5](./images/P9.29.png)
 
 Tampilan gambar setelah dilakukan pengambilan foto, terdapat filter carouselnya
-![alt](/images/P9.30.png)
+![Gambar P9.5](./images/P9.30.png)
 
-![alt](/images/P9.31.png)
+![Gambar P9.5](./images/P9.31.png)
 
-![alt](/images/P9.32.png)
+![Gambar P9.5](./images/P9.32.png)
+
+## Pertanyaan
+2. Jelaskan maksud void async pada praktikum 1?
+    Dalam Dart (bahasa yang digunakan oleh Flutter), kata kunci async digunakan untuk menandai bahwa sebuah fungsi akan menjalankan operasi asinkron (non-blok) yang mungkin membutuhkan waktu untuk diselesaikan, seperti mengambil data dari internet, membaca file, atau operasi IO lainnya.
+
+    Ketika sebuah fungsi diberi tanda async, itu berarti Anda dapat menggunakan await di dalam fungsi tersebut. await akan "menunggu" hingga operasi selesai tanpa menghalangi jalannya kode lain. Biasanya, fungsi asinkron mengembalikan Future, tapi jika fungsi tidak mengembalikan nilai apapun, Anda dapat mendeklarasikannya sebagai void async.
+
+3. Jelaskan fungsi dari anotasi @immutable dan @override ?
+    - Anotasi @immutable digunakan untuk menandai bahwa semua properti dari sebuah kelas harus bersifat "immutable" (tidak dapat diubah) setelah objek dibuat. Ini berarti semua variabel atau properti dari kelas tersebut harus bersifat final.
+
+        Di Flutter, ini penting karena banyak kelas adalah stateless widgets yang seharusnya tidak berubah setelah dibuat. Anotasi @immutable akan membantu menangkap kesalahan secara dini jika Anda mencoba mengubah properti setelah objek diciptakan.
+
+    - Anotasi @override digunakan ketika sebuah fungsi di dalam kelas menimpa (override) fungsi dengan nama dan parameter yang sama dari superclass atau antarmuka yang diimplementasikan. Ini membantu memastikan bahwa fungsi yang Anda coba timpa benar-benar ada di superclass, dan jika tidak ada, compiler akan memberikan peringatan atau kesalahan.
+
+        Contoh paling umum di Flutter adalah menimpa metode build di dalam StatelessWidget atau State dari StatefulWidget.
