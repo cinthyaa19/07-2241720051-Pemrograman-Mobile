@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:camera/camera.dart';
 import 'package:photo_filter_carousel/widget/filter_carousel.dart';
 
 void main() {
@@ -9,6 +10,9 @@ void main() {
     ),
   );
 }
+
+// availableCameras() {
+// }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

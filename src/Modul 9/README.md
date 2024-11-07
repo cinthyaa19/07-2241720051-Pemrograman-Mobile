@@ -22,7 +22,7 @@ path → membuat path untuk mendukung berbagai platform.
 
 Untuk menambahkan dependensi plugin, jalankan perintah flutter pub add
 
-![alt](/images/P9.1.png)
+![alt](/Images/P9.1.png)
 
 ### Langkah 3: Ambil Sensor Kamera dari device
 Selanjutnya, kita perlu mengecek jumlah kamera yang tersedia pada perangkat menggunakan plugin camera seperti pada kode berikut ini. Kode ini letakkan dalam void main().
@@ -108,3 +108,49 @@ Buatlah project flutter baru di pertemuan 09 dengan nama photo_filter_carousel
 ![alt](/images/P9.17.png)
 
 ![alt](/images/P9.18.png)
+
+## Tugas Praktikum
+Gabungkan hasil praktikum 1 dengan hasil praktikum 2 sehingga setelah melakukan pengambilan foto, dapat dibuat filter carouselnya!
+
+### Modifikasi file main.dart
+![alt](/images/P9.19.png)
+
+### Modifikasi file takepicture_screen.dart
+![alt](/images/P9.20.png)
+
+![alt](/images/P9.21.png)
+
+### Modifikasi file dailypicture_screen.dart
+![alt](/images/P9.22.png)
+
+### menambahkan file carousel_flowdelegate.dart
+
+![alt](/images/P9.23.png)
+
+### memodifikasi file filter_carousel.dart
+
+![alt](/images/P9.24.png)
+
+### memodifikasi file filter_item.dart
+
+![alt](/images/P9.25.png)
+
+### memodifikasi file filter_selector.dart
+
+![alt](/images/P9.26.png)
+
+![alt](/images/P9.27.png)
+
+![alt](/images/P9.28.png)
+
+### Hasil Output Tugas Praktikum
+
+Tampilan kamera sebelum dilakukan pengambilan foto
+![alt](/images/P9.29.png)
+
+Tampilan gambar setelah dilakukan pengambilan foto, terdapat filter carouselnya
+![alt](/images/P9.30.png)
+
+![alt](/images/P9.31.png)
+
+![alt](/images/P9.32.png)

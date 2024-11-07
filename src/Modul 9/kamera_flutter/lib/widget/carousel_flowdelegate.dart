@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
+import 'package:flutter/rendering.dart' show ViewportOffset;
 import 'dart:math' as math;
 
 class CarouselFlowDelegate extends FlowDelegate {
