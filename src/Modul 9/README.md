@@ -24,6 +24,9 @@ Untuk menambahkan dependensi plugin, jalankan perintah flutter pub add
 
 ![alt](/images/P9.1.png)
 
+![Gambar P9.5](./images/P9.1.png)
+
+
 ### Langkah 3: Ambil Sensor Kamera dari device
 Selanjutnya, kita perlu mengecek jumlah kamera yang tersedia pada perangkat menggunakan plugin camera seperti pada kode berikut ini. Kode ini letakkan dalam void main().
 
