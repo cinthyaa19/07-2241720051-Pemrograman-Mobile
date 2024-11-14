@@ -11,7 +11,7 @@ A new Flutter project.
 ### Langkah 1: Buat Project Baru
 Buatlah sebuah project flutter baru dengan nama master_plan di folder src week-10 repository GitHub Anda atau sesuai style laporan praktikum yang telah disepakati. Lalu buatlah susunan folder dalam project seperti gambar berikut ini.
 
-![Gambar](./Images/P1.1.png)
+![Gambar](images/P1.1.png)
 <br>
 
 ### Langkah 2: Membuat model task.dart
@@ -90,7 +90,7 @@ Terakhir, tambahkan method dispose() berguna ketika widget sudah tidak digunakan
 <br>
 
 ### Langkah 14: Hasil
-![gif](/Images/P1.14.gif)
+![gif](images/P1.14.gif)
 <br>
 
 ### Tugas Praktikum 1: Dasar State dengan Model-View
