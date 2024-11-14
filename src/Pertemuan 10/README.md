@@ -90,7 +90,7 @@ Terakhir, tambahkan method dispose() berguna ketika widget sudah tidak digunakan
 <br>
 
 ### Langkah 14: Hasil
-![gif](/images/P1.14.gif)
+![gif](/Images/P1.14.gif)
 <br>
 
 ### Tugas Praktikum 1: Dasar State dengan Model-View
