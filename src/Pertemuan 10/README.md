@@ -113,3 +113,82 @@ Terakhir, tambahkan method dispose() berguna ketika widget sudah tidak digunakan
     - `dispose()`: dipanggil ketika objek state akan dihapus dari widget tree, misalnya saat widget dihapus dari tampilan atau ketika widget induk dihilangkan.
 
 6. Kumpulkan laporan praktikum Anda berupa link commit atau repository GitHub ke dosen yang telah disepakati !
+
+<br>
+
+## Praktikum 2: Mengelola Data Layer dengan InheritedWidget dan InheritedNotifier
+### Langkah 1: Buat file plan_provider.dart
+Buat folder baru provider di dalam folder lib, lalu buat file baru dengan nama plan_provider.dart.
+
+![gambar](images/P2.1.png)
+<br>
+
+### Langkah 2: Edit main.dart
+Gantilah pada bagian atribut home dengan PlanProvider seperti berikut. Jangan lupa sesuaikan bagian impor jika dibutuhkan.
+
+![gambar](images/P2.2.png)
+<br>
+
+### Langkah 3: Tambah method pada model plan.dart
+Tambahkan dua method di dalam model class Plan.
+
+![gambar](images/P2.3.png)
+<br>
+
+### Langkah 4: Pindah ke PlanScreen
+Edit PlanScreen agar menggunakan data dari PlanProvider. Hapus deklarasi variabel plan (ini akan membuat error). Kita akan perbaiki pada langkah 5 berikut ini.
+
+![gambar](images/P2.4.png)
+<br>
+
+![gambar](images/P2.4.1.png)
+<br>
+
+### Langkah 5: Edit method _buildAddTaskButton
+Tambahkan BuildContext sebagai parameter dan gunakan PlanProvider sebagai sumber datanya.
+
+![gambar](images/P2.5.png)
+<br>
+
+### Langkah 6: Edit method _buildTaskTile
+Tambahkan parameter BuildContext, gunakan PlanProvider sebagai sumber data. Ganti TextField menjadi TextFormField untuk membuat inisial data provider menjadi lebih mudah.
+
+![gambar](images/P2.6.png)
+<br>
+
+### Langkah 7: Edit _buildList
+Sesuaikan parameter pada bagian _buildTaskTile
+
+![gambar](images/P2.7.png)
+<br>
+
+### Langkah 8: Tetap di class PlanScreen
+Edit method build sehingga bisa tampil progress pada bagian bawah (footer). Caranya, bungkus (wrap) _buildList dengan widget Expanded dan masukkan ke dalam widget Column seperti kode pada Langkah 9.
+
+![gambar](images/P2.8.png)
+<br>
+
+### Langkah 9: Tambah widget SafeArea
+Terakhir, tambahkan widget SafeArea dengan berisi completenessMessage pada akhir widget Column.
+
+![gambar](images/P2.9.png)
+<br>
+
+### Hasil
+![gif](images/P2.10.gif)
+<br>
+
+## Tugas Praktikum 2: InheritedWidget
+1. Selesaikan langkah-langkah praktikum tersebut, lalu dokumentasikan berupa GIF hasil akhir praktikum beserta penjelasannya di file README.md! Jika Anda menemukan ada yang error atau tidak berjalan dengan baik, silakan diperbaiki sesuai dengan tujuan aplikasi tersebut dibuat.
+
+2. Jelaskan mana yang dimaksud InheritedWidget pada langkah 1 tersebut! Mengapa yang digunakan InheritedNotifier?
+    - `PlanProvider` adalah sebuah kelas yang diturunkan dari `InheritedNotifier<ValueNotifier<Plan>>`. `InheritedWidget` memungkinkan widget di dalamnya untuk mengakses data atau memantau perubahan tanpa memerlukan data tersebut sebagai parameter eksplisit. `InheritedNotifier` digunakan di sini karena `ValueNotifier` berfungsi sebagai bagian dari `InheritedWidget`. Dengan `InheritedNotifier`, konsep `InheritedWidget` dan `Listenable` (seperti `ValueNotifier`) digabungkan, memungkinkan widget turunan mendeteksi perubahan secara otomatis dan melakukan rebuild saat data yang diawasi diperbarui.
+
+3. Jelaskan maksud dari method di langkah 3 pada praktikum tersebut! Mengapa dilakukan demikian?
+    - Method completedCount() pada kelas Plan berperan dalam menghitung jumlah tugas yang sudah selesai, yaitu tugas dengan atribut complete yang bernilai true. Sementara itu, method completenessMessage() menghasilkan pesan yang menggambarkan kemajuan dalam menyelesaikan tugas, dengan menunjukkan jumlah tugas yang telah diselesaikan dibandingkan total tugas yang ada. Kedua method ini membantu memberikan pandangan yang jelas tentang progres rencana, sehingga memudahkan pengguna untuk memahami seberapa banyak tugas dalam rencana tersebut telah terselesaikan.
+
+4. Lakukan capture hasil dari Langkah 9 berupa GIF, kemudian jelaskan apa yang telah Anda buat!
+    - Dalam praktikum ini, terdapat peningkatan dalam manajemen data dan pengelolaan state aplikasi, seperti modifikasi pada file `main`, penambahan `PlanProvider` sebagai penyedia data yang menggantikan penggunaan variabel `plan`, pembaruan pada model `Plan`, dan perubahan pada `PlanScreen`.  
+    Catatan: Hasilnya dapat dilihat pada praktikum 2.
+
+5. Kumpulkan laporan praktikum Anda berupa link commit atau repository GitHub ke dosen yang telah disepakati !
