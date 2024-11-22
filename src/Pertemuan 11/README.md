@@ -66,3 +66,37 @@ Lakukan run aplikasi Flutter Anda. Anda akan melihat tampilan akhir seperti gamb
 
 ![gif](images/P1.6.gif)
 <br>
+
+## Praktikum 2: Menggunakan await/async untuk menghindari callbacks
+### Langkah 1: Buka file main.dart
+Tambahkan tiga method berisi kode seperti berikut di dalam class _FuturePageState.
+
+![Gambar](images/P2.1.png)
+<br>
+
+### Langkah 2: Tambah method count()
+Lalu tambahkan lagi method ini di bawah ketiga method sebelumnya.
+
+![Gambar](images/P2.2.png)
+<br>
+
+### Langkah 3: Panggil count()
+Lakukan comment kode sebelumnya, ubah isi kode onPressed()
+
+![Gambar](images/P2.3.png)
+<br>
+
+### Langkah 4: Run
+Akhirnya, run atau tekan F5 jika aplikasi belum running. Maka Anda akan melihat seperti gambar berikut, hasil angka 6 akan tampil setelah delay 9 detik.
+
+### Soal 4
+- Jelaskan maksud kode langkah 1 dan 2 tersebut!
+
+    **Langkah 1**: Fungsi dummy untuk mensimulasikan operasi asinkron (dengan waktu tunda 3 detik) yang mengembalikan nilai tetap.
+
+    **Langkah 2**: Fungsi utama yang memanggil fungsi-fungsi asinkron tersebut satu per satu, menjumlahkan hasilnya, dan memperbarui UI dengan total.
+
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 4".
+
+    ![gif](images/P2.4.gif)
+    <br>    
