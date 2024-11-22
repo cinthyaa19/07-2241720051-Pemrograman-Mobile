@@ -192,3 +192,128 @@ Terakhir, tambahkan widget SafeArea dengan berisi completenessMessage pada akhir
     Catatan: Hasilnya dapat dilihat pada praktikum 2.
 
 5. Kumpulkan laporan praktikum Anda berupa link commit atau repository GitHub ke dosen yang telah disepakati !
+
+## Praktikum 3: Membuat State di Multiple Screens
+### Langkah 1: Edit PlanProvider
+Perhatikan kode berikut, edit class PlanProvider sehingga dapat menangani List Plan.
+
+![gambar](images/P3.5.png)
+<br>
+
+### Langkah 2: Edit main.dart
+Langkah sebelumnya dapat menyebabkan error pada main.dart dan plan_screen.dart.
+
+![gambar](images/P3.6.png)
+<br>
+
+### Langkah 3: Edit plan_screen.dart
+Tambahkan variabel plan dan atribut pada constructor
+
+![gambar](images/P3.2.png)
+<br>
+
+### Langkah 4: Error
+Itu akan terjadi error setiap kali memanggil PlanProvider.of(context). Itu terjadi karena screen saat ini hanya menerima tugas-tugas untuk satu kelompok Plan, tapi sekarang PlanProvider menjadi list dari objek plan tersebut.
+
+### Langkah 5: Tambah getter Plan
+Tambahkan getter pada _PlanScreenState seperti kode berikut.
+
+![gambar](images/P3.5.png)
+<br>
+
+### Langkah 6: Method initState()
+
+![gambar](images/P3.6.png)
+<br>
+
+### Langkah 7: Widget build
+Pastikan Anda telah merubah ke List dan mengubah nilai pada currentPlan
+
+![gambar](images/P3.7.png)
+<br>
+
+### Langkah 8: Edit _buildTaskTile
+Pastikan ubah ke List dan variabel planNotifier
+
+![gambar](images/P3.8.png)
+<br>
+
+### Langkah 9: Buat screen baru
+Pada folder view, buatlah file baru dengan nama plan_creator_screen.dart dan deklarasikan dengan StatefulWidget bernama PlanCreatorScreen. Gantilah di main.dart pada atribut home
+
+- file Plan_creator_screen.dart
+![gambar](images/P3.9.1.png)
+
+- file main.dart
+![gambar](images/P3.9.2.png)
+<br>
+
+### Langkah 10: Pindah ke class _PlanCreatorScreenState
+Kita perlu tambahkan variabel TextEditingController sehingga bisa membuat TextField sederhana untuk menambah Plan baru. Jangan lupa tambahkan dispose ketika widget unmounted
+
+![gambar](images/P3.10.png)
+<br>
+
+### Langkah 11: Pindah ke method build
+Letakkan method Widget build berikut di atas void dispose. Gantilah ‘Namaku' dengan nama panggilan Anda.
+
+![gambar](images/P3.11.png)
+<br>
+
+### Langkah 12: Buat widget _buildListCreator
+Buatlah widget berikut setelah widget build.
+
+![gambar](images/P3.12.png)
+<br>
+
+### Langkah 13: Buat void addPlan()
+Tambahkan method berikut untuk menerima inputan dari user berupa text plan.
+
+![gambar](images/P3.13.png)
+<br>
+
+### Langkah 14: Buat widget _buildMasterPlans()
+
+![gambar](images/P3.14.png)
+<br>
+
+Terakhir, run atau tekan F5 untuk melihat hasilnya jika memang belum running. Bisa juga lakukan hot restart jika aplikasi sudah running. Maka hasilnya akan seperti gambar berikut ini.
+
+![gif](images/P3.15.gif)
+<br>
+
+## Tugas Praktikum 3: State di Multiple Screens
+1. Selesaikan langkah-langkah praktikum tersebut, lalu dokumentasikan berupa GIF hasil akhir praktikum beserta penjelasannya di file README.md! Jika Anda menemukan ada yang error atau tidak berjalan dengan baik, silakan diperbaiki sesuai dengan tujuan aplikasi tersebut dibuat.
+2. Berdasarkan Praktikum 3 yang telah Anda lakukan, jelaskan maksud dari gambar diagram berikut ini!
+
+    Diagram ini menjelaskan dua layar utama dalam aplikasi Flutter, yaitu **PlanCreatorScreen** sebagai layar untuk membuat rencana dan **PlanScreen** sebagai layar detail rencana. Diagram ini juga menunjukkan bagaimana aplikasi berpindah antar layar menggunakan `Navigator.push`.
+
+    **Layar Kiri - PlanCreatorScreen**:
+
+    - Merupakan layar awal di mana pengguna dapat membuat dan melihat daftar rencana.  
+    - **MaterialApp** digunakan sebagai root yang membungkus seluruh widget aplikasi.  
+    - **PlanProvider** bertugas untuk mengelola data rencana agar dapat digunakan di berbagai bagian aplikasi.  
+    - **PlanCreatorScreen** menyediakan fitur:  
+    - **TextField** untuk menulis nama rencana baru.  
+    - **ListView** yang berada di dalam **Expanded** untuk menampilkan daftar rencana yang sudah dibuat.  
+
+    **Proses Navigasi - Navigator Push**:  
+
+    - Ketika pengguna memilih salah satu rencana di **PlanCreatorScreen**, aplikasi menggunakan `Navigator.push` untuk membuka layar baru, yaitu **PlanScreen**.  
+    - `Navigator.push` memungkinkan pengguna berpindah ke layar detail rencana yang dipilih.  
+
+    **Layar Kanan - PlanScreen**:  
+
+    - Berfungsi untuk menampilkan detail rencana yang dipilih oleh pengguna.  
+    - **PlanScreen** menyajikan informasi rencana tertentu, dengan komponen seperti:  
+    - **ListView** untuk menampilkan daftar tugas terkait rencana tersebut.  
+    - **SafeArea** dengan teks yang menunjukkan status atau progres rencana.  
+
+    Dengan ini, diagram menggambarkan dua layar utama beserta alur navigasi dan perpindahan data antar layar.
+
+3. Lakukan capture hasil dari Langkah 14 berupa GIF, kemudian jelaskan apa yang telah Anda buat!
+
+    ![gif](images/P3.15.gif)
+
+4. Kumpulkan laporan praktikum Anda berupa link commit atau repository GitHub ke dosen yang telah disepakati !
+
