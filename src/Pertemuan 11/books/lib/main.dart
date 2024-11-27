@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:http/http.dart' as http;
+import 'package:async/async.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,9 +32,25 @@ class FuturePage extends StatefulWidget {
 }
 
 class _FuturePageState extends State<FuturePage> {
+  late Completer completer;
+
+  Future getNumber() {
+    completer = Completer<int>();
+    calculate();
+    return completer.future;
+  }
+
+  calculate() async {
+    try {
+      await Future.delayed(const Duration(seconds: 5));
+      completer.complete(42);
+    } catch (_) {
+      completer.completeError(_);
+    }
+  }
 
   Future count() async {
-    int total  = 0;
+    int total = 0;
     total = await returnOneAsync();
     total += await returnTwoAsync();
     total += await returnThreeAsync();
@@ -43,8 +60,8 @@ class _FuturePageState extends State<FuturePage> {
   }
 
   Future<int> returnOneAsync() async {
-  await Future.delayed(const Duration(seconds: 3));
-  return 1;
+    await Future.delayed(const Duration(seconds: 3));
+    return 1;
   }
 
   Future<int> returnTwoAsync() async {
@@ -63,7 +80,7 @@ class _FuturePageState extends State<FuturePage> {
     Uri url = Uri.https(authority, path);
     return http.get(url);
   }
-  
+
   String result = '';
   @override
   Widget build(BuildContext context) {
@@ -76,8 +93,15 @@ class _FuturePageState extends State<FuturePage> {
           const Spacer(),
           ElevatedButton(
             child: Text('GO!'),
-            onPressed: (){
-              count();
+            onPressed: () {
+              getNumber().then((value) {
+                setState(() {
+                  result = value.toString();
+                });
+              }).catchError((e) {
+                result = 'An error occurred';
+              });
+              // count();
               // setState(() {});
               // getData()
               // .then((value) {
@@ -88,7 +112,7 @@ class _FuturePageState extends State<FuturePage> {
               //   setState(() {});
               // });
             },
-          ),  
+          ),
           const Spacer(),
           Text(result),
           const Spacer(),

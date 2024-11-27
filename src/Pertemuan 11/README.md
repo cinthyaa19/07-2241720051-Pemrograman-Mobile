@@ -100,3 +100,57 @@ Akhirnya, run atau tekan F5 jika aplikasi belum running. Maka Anda akan melihat 
 
     ![gif](images/P2.4.gif)
     <br>    
+
+## Praktikum 3: Menggunakan Completer di Future
+### Langkah 1: Buka main.dart
+Pastikan telah impor package async
+
+![Gambar](images/P3.1.png)
+<br>
+
+### Langkah 2: Tambahkan variabel dan method
+Tambahkan variabel late dan method di class _FuturePageState
+
+![Gambar](images/P3.2.png)
+<br>
+
+### Langkah 3: Ganti isi kode onPressed()
+Tambahkan kode berikut pada fungsi onPressed(). Kode sebelumnya bisa Anda comment.
+
+### Langkah 4:
+Terakhir, run atau tekan F5 untuk melihat hasilnya jika memang belum running. Bisa juga lakukan hot restart jika aplikasi sudah running. Maka hasilnya akan seperti gambar berikut ini. Setelah 5 detik, maka angka 42 akan tampil.
+
+![gif](images/P3.4.gif)
+<br> 
+
+### Soal 5
+- Jelaskan maksud kode langkah 2 tersebut!
+
+    Kode tersebut adalah fungsi asinkron count yang menghitung total dari hasil tiga operasi asinkron (returnOneAsync, returnTwoAsync, returnThreeAsync). Fungsi ini menunggu setiap operasi selesai satu per satu menggunakan await, menjumlahkan hasilnya ke variabel total, lalu memperbarui UI dengan hasil total dalam bentuk string melalui setState.
+
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 5".
+
+### Langkah 5: Ganti method calculate()
+Gantilah isi code method calculate() seperti kode berikut, atau Anda dapat membuat calculate2()
+
+![Gambar](images/P3.2.png)
+<br>
+
+### Langkah 6: Pindah ke onPressed()
+
+![Gambar](images/P3.2.png)
+<br>
+
+### Soal 6
+- Jelaskan maksud perbedaan kode langkah 2 dengan langkah 5-6 tersebut!
+
+    Langkah 2: Menjalankan operasi asinkron satu per satu secara berurutan menggunakan await, menjumlahkan hasilnya, lalu memperbarui UI. Operasi selesai setelah semua tugas selesai.
+
+    Langkah 5-6: Menggunakan completer untuk menyelesaikan operasi asinkron tunggal, memperbarui UI hanya setelah hasil dikembalikan, dan menangani error secara eksplisit. Proses lebih fokus pada satu tugas. 
+    
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 6".
+
+    ![gif](images/P3.gif)
+    <br> 
+
+<br>
