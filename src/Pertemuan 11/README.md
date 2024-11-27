@@ -154,3 +154,31 @@ Gantilah isi code method calculate() seperti kode berikut, atau Anda dapat membu
     <br> 
 
 <br>
+
+## Praktikum 4: Memanggil Future secara paralel
+### Langkah 1: Buka file main.dart
+Tambahkan method ini ke dalam class _FuturePageState
+
+![Gambar](images/P4.1.png)
+<br>
+
+### Langkah 2: Edit onPressed()
+Anda bisa hapus atau comment kode sebelumnya, kemudian panggil method dari langkah 1 tersebut.
+
+![Gambar](images/P4.2.png)
+<br>
+
+### Langkah 3: Run
+Anda akan melihat hasilnya dalam 3 detik berupa angka 6 lebih cepat dibandingkan praktikum sebelumnya menunggu sampai 9 detik.
+
+### Soal 7
+Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 7".
+
+![gif](images/P4.gif)
+<br> 
+
+### Langkah 4: Ganti variabel futureGroup
+Anda dapat menggunakan FutureGroup dengan Future.wait seperti kode berikut.
+
+### Soal 8
+Jelaskan maksud perbedaan kode langkah 1 dan 4!
