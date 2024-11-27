@@ -180,5 +180,16 @@ Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan co
 ### Langkah 4: Ganti variabel futureGroup
 Anda dapat menggunakan FutureGroup dengan Future.wait seperti kode berikut.
 
+![Gambar](images/P4.4.png)
+<br>
+
 ### Soal 8
 Jelaskan maksud perbedaan kode langkah 1 dan 4!
+
+**Langkah 1:**  
+`FutureGroup` digunakan untuk mengelola beberapa `Future` dan menunggu hingga semuanya selesai. Anda dapat menambahkan `Future` menggunakan metode `add`, lalu harus memanggil `close()` setelah semua `Future` selesai ditambahkan agar proses dapat berjalan. Nilai yang dikembalikan berupa daftar hasil dari semua `Future` melalui properti `future`.  
+
+**Langkah 4:**  
+`Future.wait` memungkinkan Anda langsung memberikan daftar `Future` yang ingin dijalankan secara bersamaan. Tidak perlu menggunakan metode `add` atau memanggil `close()` seperti pada `FutureGroup`. Setelah semua `Future` selesai, hasilnya berupa daftar nilai dari masing-masing `Future`.  
+
+Secara keseluruhan, `Future.wait` lebih sederhana dan cocok untuk digunakan jika semua proses sudah diketahui sejak awal. Sementara itu, `FutureGroup` lebih fleksibel untuk menambahkan `Future` secara bertahap, meskipun membutuhkan penanganan tambahan, seperti memanggil `close()`.
