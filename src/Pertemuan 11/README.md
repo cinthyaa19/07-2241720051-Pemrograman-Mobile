@@ -193,3 +193,43 @@ Jelaskan maksud perbedaan kode langkah 1 dan 4!
 `Future.wait` memungkinkan Anda langsung memberikan daftar `Future` yang ingin dijalankan secara bersamaan. Tidak perlu menggunakan metode `add` atau memanggil `close()` seperti pada `FutureGroup`. Setelah semua `Future` selesai, hasilnya berupa daftar nilai dari masing-masing `Future`.  
 
 Secara keseluruhan, `Future.wait` lebih sederhana dan cocok untuk digunakan jika semua proses sudah diketahui sejak awal. Sementara itu, `FutureGroup` lebih fleksibel untuk menambahkan `Future` secara bertahap, meskipun membutuhkan penanganan tambahan, seperti memanggil `close()`.
+
+## Praktikum 5: Menangani Respon Error pada Async Code
+### Langkah 1: Buka file main.dart
+Tambahkan method ini ke dalam class _FuturePageState
+
+![Gambar](images/P5.1.png)
+<br>
+
+### Langkah 2: ElevatedButton
+Ganti dengan kode berikut
+
+### Langkah 3: Run
+Lakukan run dan klik tombol GO!
+
+![Gambar](images/P5.3.1.png)
+<br>
+
+Pada bagian debug console akan melihat teks Complete seperti berikut.
+
+![Gambar](images/P5.3.png)
+<br>
+
+Soal 9
+Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 9".
+
+![gif](images/P5.gif)
+<br>
+
+### Langkah 4: Tambah method handleError()
+Tambahkan kode ini di dalam class _FutureStatePage
+
+![Gambar](images/P5.4.png)
+<br>
+
+### Soal 10
+Panggil method handleError() tersebut di ElevatedButton, lalu run. Apa hasilnya? Jelaskan perbedaan kode langkah 1 dan 4!
+
+- Langkah 1 membuat method `returnError()` yang mensimulasikan error dengan menunda proses selama 2 detik sebelum melemparkan pesan error tanpa penanganan. Jika error terjadi, aplikasi berpotensi langsung crash.  
+
+- Langkah 4, method `handleError()` ditambahkan untuk menangani error yang dihasilkan oleh `returnError()` menggunakan try-catch-finally. Di dalam blok catch, error ditangkap dan ditampilkan ke UI melalui `setState`. Blok finally memastikan kode tetap dieksekusi, seperti mencetak pesan "Complete". Langkah ini membuat aplikasi lebih stabil dan responsif meskipun terjadi error.
