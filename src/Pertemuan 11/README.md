@@ -215,7 +215,7 @@ Pada bagian debug console akan melihat teks Complete seperti berikut.
 ![Gambar](images/P5.3.png)
 <br>
 
-Soal 9
+### Soal 9
 Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 9".
 
 ![gif](images/P5.gif)
@@ -233,3 +233,64 @@ Panggil method handleError() tersebut di ElevatedButton, lalu run. Apa hasilnya?
 - Langkah 1 membuat method `returnError()` yang mensimulasikan error dengan menunda proses selama 2 detik sebelum melemparkan pesan error tanpa penanganan. Jika error terjadi, aplikasi berpotensi langsung crash.  
 
 - Langkah 4, method `handleError()` ditambahkan untuk menangani error yang dihasilkan oleh `returnError()` menggunakan try-catch-finally. Di dalam blok catch, error ditangkap dan ditampilkan ke UI melalui `setState`. Blok finally memastikan kode tetap dieksekusi, seperti mencetak pesan "Complete". Langkah ini membuat aplikasi lebih stabil dan responsif meskipun terjadi error.
+
+## Praktikum 6: Menggunakan Future dengan StatefulWidget
+### Langkah 1: install plugin geolocator
+Tambahkan plugin geolocator dengan mengetik perintah berikut di terminal.
+
+![Gambar](images/P6.1.png)
+<br>
+
+### Langkah 2: Tambah permission GPS
+Jika Anda menargetkan untuk platform Android, maka tambahkan baris kode berikut di file
+
+![Gambar](images/P6.2.png)
+<br>
+
+### Langkah 3: Buat file geolocation.dart
+Tambahkan file baru ini di folder lib project Anda.
+
+![Gambar](images/P6.3.png)
+<br>
+
+### Langkah 4: Buat StatefulWidget
+Buat class LocationScreen di dalam file geolocation.dart
+
+![Gambar](images/P6.4.png)
+<br>
+
+### Langkah 5: Isi kode geolocation.dart
+
+![Gambar](images/P6.5.png)
+<br>
+
+### Soal 11
+Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda.
+
+![Gambar](images/P6.5.1.png)
+<br>
+
+### Langkah 6: Edit main.dart
+Panggil screen baru tersebut di file main Anda seperti berikut.
+
+![Gambar](images/P6.6.png)
+<br>
+
+### Langkah 7: Run
+Run project Anda di device atau emulator (bukan browser), maka akan tampil seperti berikut ini.
+
+![gif](images/P6.7.gif)
+<br>
+
+### Langkah 8: Tambahkan animasi loading
+Tambahkan widget loading seperti kode berikut. Lalu hot restart, perhatikan perubahannya.
+
+![gif](images/P6.8.gif)
+<br>
+
+### Soal 12
+- Jika Anda tidak melihat animasi loading tampil, kemungkinan itu berjalan sangat cepat. Tambahkan delay pada method getPosition() dengan kode await Future.delayed(const Duration(seconds: 3));
+- Apakah Anda mendapatkan koordinat GPS ketika run di browser? Mengapa demikian?
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 12".
+
+
