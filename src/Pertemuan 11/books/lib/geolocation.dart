@@ -38,6 +38,9 @@ class _LocationScreenState extends State<LocationScreen> {
           } 
           else if (snapshot.connectionState == 
             ConnectionState.done) {
+              if (snapshot.hasError) {
+                return Text('Something terrible happened!');
+              }
               return Text(snapshot.data.toString());
           }
           else {

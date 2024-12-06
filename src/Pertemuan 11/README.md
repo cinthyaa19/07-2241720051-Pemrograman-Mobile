@@ -323,6 +323,9 @@ Ketik kode berikut dan sesuaikan. Kode lama bisa Anda comment atau hapus.
 
 ### Soal 13
 Apakah ada perbedaan UI dengan praktikum sebelumnya? Mengapa demikian?
+
+    Dari segi tampilan, tidak ada perbedaan yang terlihat karena kedua kode menghasilkan elemen yang sama, seperti CircularProgressIndicator untuk proses loading dan Text untuk menampilkan hasil lokasi. Struktur UI seperti Scaffold, AppBar, dan tata letak lainnya juga tetap sama. Namun, perbedaan utama terletak pada logika di balik kode, di mana pada praktikum ini digunakan FutureBuilder untuk mengelola data serta menangani error dengan lebih baik. Jadi, meskipun tampilannya serupa, kode yang diperbarui lebih terorganisir, efisien, dan mampu menangani masalah secara lebih optimal.
+
 Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 13".
 Seperti yang Anda lihat, menggunakan FutureBuilder lebih efisien, clean, dan reactive dengan Future bersama UI.
 
@@ -334,4 +337,9 @@ Tambahkan kode berikut untuk menangani ketika terjadi error. Kemudian hot restar
 
 ### Soal 14
 Apakah ada perbedaan UI dengan langkah sebelumnya? Mengapa demikian?
+
+     Setelah menambahkan error handling dan melakukan hot restart, tampilan UI tidak akan berbeda selama proses pengambilan lokasi berhasil tanpa kendala. Aplikasi tetap menampilkan **CircularProgressIndicator** saat loading dan menampilkan data lokasi berupa latitude dan longitude jika berhasil. Namun, jika terjadi error, seperti penolakan izin lokasi atau layanan lokasi yang tidak aktif, UI akan menampilkan teks **"Something terrible happened!"**. Hal ini sebelumnya tidak ditangani sehingga hanya menghasilkan tampilan kosong dengan **Text('')**.
 Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 14".
+
+![gif](images/P7.2.gif)
+<br>
