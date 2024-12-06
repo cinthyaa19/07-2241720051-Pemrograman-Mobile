@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:http/http.dart' as http;
 
-
 void main() {
   runApp(const MyApp());
 }
@@ -33,27 +32,25 @@ class FuturePage extends StatefulWidget {
 }
 
 class _FuturePageState extends State<FuturePage> {
-
   Future handleError() async {
     try {
       await returnError();
-    }
-    catch (error) {
+    } catch (error) {
       setState(() {
         result = error.toString();
       });
-    }
-    finally {
+    } finally {
       print('Complete');
     }
   }
 
   Future returnError() async {
-    await Future.delayed( const Duration(seconds: 2));
+    await Future.delayed(const Duration(seconds: 2));
     throw Exception('Something terible happened!');
   }
+
   void returnFG() {
-    final futures =Future.wait<int>([
+    final futures = Future.wait<int>([
       returnOneAsync(),
       returnTwoAsync(),
       returnThreeAsync(),
@@ -130,26 +127,26 @@ class _FuturePageState extends State<FuturePage> {
         child: Column(children: [
           const Spacer(),
           ElevatedButton(
-            child: Text('GO!'),
-            onPressed: () {
-              returnError().then((value) {
-                setState(() {
-                  result = "Success";
-                });
-              }).catchError((onError) {
-                setState(() {
-                  result = onError.toString();
-                });
-              }).whenComplete(() => print('Complete'));
-            }
-            // onPressed: () {
-            //   getNumber().then((value) {
-            //     setState(() {
-            //       result = value.toString();
-            //     });
-            //   }).catchError((e) {
-            //     result = 'An error occurred';
-            //   });
+              child: Text('GO!'),
+              onPressed: () {
+                returnError().then((value) {
+                  setState(() {
+                    result = "Success";
+                  });
+                }).catchError((onError) {
+                  setState(() {
+                    result = onError.toString();
+                  });
+                }).whenComplete(() => print('Complete'));
+              }
+              // onPressed: () {
+              //   getNumber().then((value) {
+              //     setState(() {
+              //       result = value.toString();
+              //     });
+              //   }).catchError((e) {
+              //     result = 'An error occurred';
+              //   });
               // count();
               // setState(() {});
               // getData()
@@ -160,8 +157,8 @@ class _FuturePageState extends State<FuturePage> {
               //   result = 'An error occurred';
               //   setState(() {});
               // });
-            // },
-          ),
+              // },
+              ),
           const Spacer(),
           Text(result),
           const Spacer(),

@@ -296,4 +296,42 @@ Tambahkan widget loading seperti kode berikut. Lalu hot restart, perhatikan peru
 
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 12".
 
+## Praktikum 7: Manajemen Future dengan FutureBuilder
+### Langkah 1: Modifikasi method getPosition()
+Buka file geolocation.dart kemudian ganti isi method dengan kode ini.
 
+![Gambar](images/P7.2.png)
+<br>
+
+### Langkah 2: Tambah variabel
+Tambah variabel ini di class _LocationScreenState
+
+![Gambar](images/P7.3.png)
+<br>
+
+### Langkah 3: Tambah initState()
+Tambah method ini dan set variabel 
+
+![Gambar](images/P7.1.png)
+<br>
+
+### Langkah 4: Edit method build()
+Ketik kode berikut dan sesuaikan. Kode lama bisa Anda comment atau hapus.
+
+![Gambar](images/P7.4.png)
+<br>
+
+### Soal 13
+Apakah ada perbedaan UI dengan praktikum sebelumnya? Mengapa demikian?
+Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 13".
+Seperti yang Anda lihat, menggunakan FutureBuilder lebih efisien, clean, dan reactive dengan Future bersama UI.
+
+![gif](images/P7.1.gif)
+<br>
+
+### Langkah 5: Tambah handling error
+Tambahkan kode berikut untuk menangani ketika terjadi error. Kemudian hot restart.
+
+### Soal 14
+Apakah ada perbedaan UI dengan langkah sebelumnya? Mengapa demikian?
+Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 14".
