@@ -343,3 +343,61 @@ Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan co
 
 ![gif](images/P7.2.gif)
 <br>
+
+## Praktikum 8: Navigation route dengan Future Function
+
+### Langkah 1: Buat file baru navigation_first.dart
+Buatlah file baru ini di project lib Anda.
+
+![Gambar](images/P8.1.png)
+<br>
+
+### Langkah 2: Isi kode navigation_first.dart
+
+![Gambar](images/P8.2.png)
+<br>
+
+### Soal 15
+Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda.
+Silakan ganti dengan warna tema favorit Anda.
+
+### Langkah 3: Tambah method di class _NavigationFirstState
+
+![Gambar](images/P8.3.png)
+<br>
+
+### Langkah 4: Buat file baru navigation_second.dart
+Buat file baru ini di project lib Anda. Silakan jika ingin mengelompokkan view menjadi satu folder dan sesuaikan impor yang dibutuhkan.
+
+![Gambar](images/P8.4.png)
+<br>
+
+### Langkah 5: Buat class NavigationSecond dengan StatefulWidget
+
+![Gambar](images/P8.5.png)
+<br>
+
+### Langkah 6: Edit main.dart
+Lakukan edit properti home.
+
+![Gambar](images/P8.6.png)
+<br>
+
+Langkah 8: Run
+Lakukan run, jika terjadi error silakan diperbaiki.
+
+![gif](images/P8.1.gif)
+<br>
+
+### Soal 16
+Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?
+
+    Yang terjadi ketika saya klik setiap button, maka button tersebut menampilkan background dengan warna yang sesuai dengan warna yang diinputkan pada button tersebut. 
+
+    Saat tombol **Red**, **Green**, atau **Blue** di layar kedua diklik, warna yang dipilih (merah, hijau, atau biru) akan diterapkan, layar kedua akan tertutup, dan layar pertama akan kembali dengan latar belakang yang berubah sesuai warna pilihan. Namun, jika tidak ada warna yang dipilih dan tombol **Change Color** ditekan, layar kedua akan tertutup tanpa mengubah warna latar belakang.
+    
+Gantilah 3 warna pada langkah 5 dengan warna favorit Anda!
+Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 16".
+
+![gif](images/P8.2.gif)
+<br>
