@@ -394,10 +394,64 @@ Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?
 
     Yang terjadi ketika saya klik setiap button, maka button tersebut menampilkan background dengan warna yang sesuai dengan warna yang diinputkan pada button tersebut. 
 
-    Saat tombol **Red**, **Green**, atau **Blue** di layar kedua diklik, warna yang dipilih (merah, hijau, atau biru) akan diterapkan, layar kedua akan tertutup, dan layar pertama akan kembali dengan latar belakang yang berubah sesuai warna pilihan. Namun, jika tidak ada warna yang dipilih dan tombol **Change Color** ditekan, layar kedua akan tertutup tanpa mengubah warna latar belakang.
+    Saat tombol Red, Green atau Blue di layar kedua diklik, warna yang dipilih (merah, hijau, atau biru) akan diterapkan, layar kedua akan tertutup, dan layar pertama akan kembali dengan latar belakang yang berubah sesuai warna pilihan. Namun, jika tidak ada warna yang dipilih dan tombol **Change Color** ditekan, layar kedua akan tertutup tanpa mengubah warna latar belakang.
     
 Gantilah 3 warna pada langkah 5 dengan warna favorit Anda!
 Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 16".
+
+![gif](images/P8.2.gif)
+<br>
+
+## Praktikum 9: Memanfaatkan async/await dengan Widget Dialog
+### Langkah 1: Buat file baru navigation_dialog.dart
+Buat file dart baru di folder lib project Anda.
+
+![Gambar](images/P9.1.png)
+<br>
+
+### Langkah 2: Isi kode navigation_dialog.dart
+
+![Gambar](images/P9.2.png)
+<br>
+
+### Langkah 3: Tambah method async
+
+![Gambar](images/P9.3.png)
+<br>
+
+### Langkah 4: Panggil method di ElevatedButton
+
+![Gambar](images/P9.4.png)
+<br>
+
+### Langkah 5: Edit main.dart
+Ubah properti home
+
+![Gambar](images/P9.5.png)
+<br>
+
+### Langkah 6: Run
+Coba ganti warna background dengan widget dialog tersebut. Jika terjadi error, silakan diperbaiki.
+
+![Gambar](images/P9.6.png)
+<br>
+
+### Soal 17
+Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?
+
+![gif](images/P8.2.gif)
+<br>
+
+Ketika button Red, Green, atau Blue di dialog diklik, warna latar belakang layar utama akan berubah sesuai dengan pilihan (merah, hijau, atau biru). Setelah warna dipilih, dialog akan menutup, dan warna tersebut dikembalikan ke layar utama. Fungsi `setState()` kemudian dipanggil untuk memperbarui tampilan layar utama dengan warna baru. Proses ini terjadi karena dialog muncul saat button "Change Color" diklik, lalu ditutup menggunakan `Navigator.pop`, sehingga warna yang dipilih dapat diterapkan dan layar utama diperbarui.
+
+<br>
+
+Gantilah 3 warna pada langkah 3 dengan warna favorit Anda!
+
+![Gambar](images/P9.7.png)
+<br>
+
+Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 17".
 
 ![gif](images/P8.2.gif)
 <br>
